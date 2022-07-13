@@ -64,7 +64,6 @@ flutter:
 
   assets:
     - assets/images/carpool.jpeg
-    - assets/images/source_marker_in_map.png
     - assets/images/source_icon_2-removebg-preview.png
   # To add assets to your application, add an assets section, like this:
   # assets:
