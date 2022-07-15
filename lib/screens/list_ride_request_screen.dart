@@ -1,4 +1,5 @@
 import 'package:carpooling/models/ride_request.dart';
+import 'package:carpooling/screens/ride_details_screen.dart';
 import 'package:carpooling/services/ride_request_service.dart';
 import 'package:flutter/material.dart';
 
@@ -14,11 +15,21 @@ class _ListRideRequestScreenState extends State<ListRideRequestScreen> {
 
   Widget getRideRequestTile(BuildContext context, int index) {
     return Card(
-      child: ListTile(
-        leading: const FlutterLogo(),
-        title: Text(rideRequestList[index].rideType.toString().split('.').last),
-        subtitle: Text("Ride from " + (rideRequestList[index].source ?? "") + " to " + (rideRequestList[index].destination ?? "")),
-        isThreeLine: true,
+      child: GestureDetector(child:
+        ListTile(
+          leading: const FlutterLogo(),
+          title: Text(rideRequestList[index].rideType.toString().split('.').last),
+          subtitle: Text("Ride from " + (rideRequestList[index].source ?? "") + " to " + (rideRequestList[index].destination ?? "")),
+          isThreeLine: true,
+        ),
+        onTap:() {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => RideDetailsScreen(ride: rideRequestList[index]),
+            ),
+          );
+        }
       )
     );
   }
