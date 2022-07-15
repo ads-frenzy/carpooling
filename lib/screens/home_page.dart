@@ -77,8 +77,7 @@ class HomePageScreen extends StatelessWidget{
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
           padding: const EdgeInsets.only(right: 10.0,left: 10.0),
           child:Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -87,7 +86,6 @@ class HomePageScreen extends StatelessWidget{
               optionsSection(context)
             ]
           )
-      )
     );
   }
 }

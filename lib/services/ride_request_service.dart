@@ -21,4 +21,7 @@ class RideRequestService {
     ]);
     return rideRequestList;
   }
+  static void submitRideRequest(RideRequest rideRequest){
+    //TODO implement backend part
+  }
 }
