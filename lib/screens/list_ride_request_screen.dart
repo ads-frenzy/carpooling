@@ -25,12 +25,9 @@ class _ListRideRequestScreenState extends State<ListRideRequestScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("My Ride Requests")),
-      body: ListView.builder(
-        itemBuilder: getRideRequestTile,
-        itemCount: rideRequestList.length,
-      ),
+    return ListView.builder(
+      itemBuilder: getRideRequestTile,
+      itemCount: rideRequestList.length,
     );
   }
 }
