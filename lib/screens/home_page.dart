@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carpooling/screens/ride_request_page.dart';
-mport 'package:firebase_instance_id/firebase_instance_id.dart';
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:html';
 
-var instanceId = FirebaseInstanceId.appInstanceId ?? 'Unknown installation id';
 
 
 class HomePageScreen extends StatelessWidget{
   const HomePageScreen({Key? key}) : super(key: key);
-  print(instanceId);
+
   Widget rideOptionButton(BuildContext context, final String rideType, int buttonColor){
+
 
     return ElevatedButton(
         onPressed: () {
